@@ -8,9 +8,9 @@ spec:
   - list:
       elements:
       - cluster_name: k3d-shared
-        # cluster: k3d-shared
-        # charts_repo_url: https://charts.bitnami.com/bitnami
-        # charts_target_version: "5.3.10"
+        charts_repo_url: https://charts.bitnami.com/bitnami
+        charts_target_version: "5.3.10"
+        namespace: "abc-app-helm"
 
   template:
     metadata:
@@ -22,23 +22,20 @@ spec:
        # for values.yaml
        - repoURL: https://github.com/orvindemsy/argocd-example-apps.git
          targetRevision: master
-         path: at-infra/abc-app/guestbook-appset
-
-         directory:
-          recurse: true
-        #  ref: infrarepo
+         ref: infrarepo
        # helm chart
-      #  - repoURL: '{{charts_repo_url}}'
-      #    targetRevision: '{{charts_target_version}}'
-      #    chart: argo-workflows
-      #    helm:
-      #     version: v3
-      #     releaseName: argo-workflows
-      #     valueFiles:
-      #     - $infrarepo/{{cluster}}/k8s/helm/argo-workflows/values.yaml
+       - repoURL: '{{charts_repo_url}}'
+         targetRevision: '{{charts_target_version}}'
+         chart: argo-workflows
+         helm:
+          version: v3
+          releaseName: argo-workflows
+          valueFiles:
+          - $infrarepo/at-infra/abc-app/argoworkflow-appset-helm/values.yaml
+
       destination:
         server: https://kubernetes.default.svc
-        namespace: abc-app2
+        namespace: '{{namespace}}'
 
       syncPolicy:
         #automated:
