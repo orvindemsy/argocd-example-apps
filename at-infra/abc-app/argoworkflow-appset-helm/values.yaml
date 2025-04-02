@@ -1144,60 +1144,60 @@ workflows:
 ## @param postgresql.auth.database PortgreSQL database name
 ## @param postgresql.auth.password PortgreSQL database password
 ##
-postgresql:
-  enabled: true
-  service:
-    ports:
-      postgresql: 5432
-  auth:
-    username: postgres
-    database: bn_argo_workflows
-    password: ""
+# postgresql:
+#   enabled: true
+#   service:
+#     ports:
+#       postgresql: 5432
+#   auth:
+#     username: postgres
+#     database: bn_argo_workflows
+#     password: ""
 
-## @section MySQL subchart
-##
+# ## @section MySQL subchart
+# ##
 
-## Mysql subchart configuration
-## @param mysql.enabled Enable MySQL subchart and controller persistence using MySQL
-## @param mysql.service.ports.mysql MySQL port
-## @param mysql.auth.username MySQL username
-## @param mysql.auth.database MySQL database name
-## @param mysql.auth.password MySQL database password
-##
-mysql:
-  enabled: false
-  service:
-    ports:
-      mysql: 3306
-  auth:
-    username: mysql
-    database: bn_argo_workflows
-    password: ""
+# ## Mysql subchart configuration
+# ## @param mysql.enabled Enable MySQL subchart and controller persistence using MySQL
+# ## @param mysql.service.ports.mysql MySQL port
+# ## @param mysql.auth.username MySQL username
+# ## @param mysql.auth.database MySQL database name
+# ## @param mysql.auth.password MySQL database password
+# ##
+# mysql:
+#   enabled: false
+#   service:
+#     ports:
+#       mysql: 3306
+#   auth:
+#     username: mysql
+#     database: bn_argo_workflows
+#     password: ""
 
-## @section External Database configuration
-##
+# ## @section External Database configuration
+# ##
 
-## External Database Configuration
-## @param externalDatabase.enabled Enable using externaldatabase and the controller to use persistence with it
-## @param externalDatabase.host External Database server host
-## @param externalDatabase.port External Database server port
-## @param externalDatabase.username External Database username
-## @param externalDatabase.password External Database user password
-## @param externalDatabase.database External Database database name
-## @param externalDatabase.existingSecret The name of an existing secret with database credentials
-## @param externalDatabase.type Either postgresql or mysql
-##
-externalDatabase:
-  enabled: false
-  ## Either "postgresql" or  "mysql"
-  ##
-  type: ""
-  host: localhost
-  port: 3306
-  username: bn_wordpress
-  password: ""
-  database: bitnami_wordpress
-  ## NOTE: Must contain key `database-password`
-  ## NOTE: When it's set, the `externalDatabase.password` parameter is ignored
-  ##
-  existingSecret: ""
+# ## External Database Configuration
+# ## @param externalDatabase.enabled Enable using externaldatabase and the controller to use persistence with it
+# ## @param externalDatabase.host External Database server host
+# ## @param externalDatabase.port External Database server port
+# ## @param externalDatabase.username External Database username
+# ## @param externalDatabase.password External Database user password
+# ## @param externalDatabase.database External Database database name
+# ## @param externalDatabase.existingSecret The name of an existing secret with database credentials
+# ## @param externalDatabase.type Either postgresql or mysql
+# ##
+# externalDatabase:
+#   enabled: false
+#   ## Either "postgresql" or  "mysql"
+#   ##
+#   type: ""
+#   host: localhost
+#   port: 3306
+#   username: bn_wordpress
+#   password: ""
+#   database: bitnami_wordpress
+#   ## NOTE: Must contain key `database-password`
+#   ## NOTE: When it's set, the `externalDatabase.password` parameter is ignored
+#   ##
+#   existingSecret: ""
