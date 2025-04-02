@@ -12,7 +12,7 @@ spec:
   source:
     repoURL: https://github.com/orvindemsy/argocd-example-apps.git
     targetRevision: master
-    path: at-infra/abc-app
+    path: at-infra/abc-app/guestbook
 
     directory:
       recurse: true
