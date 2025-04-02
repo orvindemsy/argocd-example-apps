@@ -22,7 +22,7 @@ spec:
        # for values.yaml
        - repoURL: https://github.com/orvindemsy/argocd-example-apps.git
          targetRevision: master
-         path: at-infra/abc-app
+         path: at-infra/abc-app/guestbook-appset
 
          directory:
           recurse: true
@@ -38,7 +38,7 @@ spec:
       #     - $infrarepo/{{cluster}}/k8s/helm/argo-workflows/values.yaml
       destination:
         name: '{{cluster_name}}'
-        namespace: abc-app
+        namespace: abc-app2
 
       syncPolicy:
         #automated:
