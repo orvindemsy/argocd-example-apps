@@ -37,7 +37,7 @@ spec:
       #     valueFiles:
       #     - $infrarepo/{{cluster}}/k8s/helm/argo-workflows/values.yaml
       destination:
-        name: '{{cluster_name}}'
+        server: https://kubernetes.default.svc
         namespace: abc-app2
 
       syncPolicy:
