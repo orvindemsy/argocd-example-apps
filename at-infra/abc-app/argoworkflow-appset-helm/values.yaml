@@ -1137,22 +1137,22 @@ workflows:
 ## @section PostgreSQL subchart
 ##
 
-## Postgresql subchart configuration
-## @param postgresql.enabled Enable PostgreSQL subchart and controller persistence using PostgreSQL
-## @param postgresql.service.ports.postgresql PostgreSQL port
-## @param postgresql.auth.username PostgreSQL username
-## @param postgresql.auth.database PortgreSQL database name
-## @param postgresql.auth.password PortgreSQL database password
-##
-# postgresql:
-#   enabled: true
-#   service:
-#     ports:
-#       postgresql: 5432
-#   auth:
-#     username: postgres
-#     database: bn_argo_workflows
-#     password: ""
+# Postgresql subchart configuration
+# @param postgresql.enabled Enable PostgreSQL subchart and controller persistence using PostgreSQL
+# @param postgresql.service.ports.postgresql PostgreSQL port
+# @param postgresql.auth.username PostgreSQL username
+# @param postgresql.auth.database PortgreSQL database name
+# @param postgresql.auth.password PortgreSQL database password
+#
+postgresql:
+  enabled: true
+  service:
+    ports:
+      postgresql: 5432
+  auth:
+    username: postgres
+    database: bn_argo_workflows
+    password: ""
 
 # ## @section MySQL subchart
 # ##
