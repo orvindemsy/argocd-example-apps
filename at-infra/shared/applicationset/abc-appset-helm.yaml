@@ -10,7 +10,6 @@ spec:
       - cluster_name: k3d-shared
         charts_repo_url: https://charts.bitnami.com/bitnami
         charts_target_version: "5.3.10"
-        namespace: "abc-app-helm"
 
   template:
     metadata:
@@ -35,7 +34,7 @@ spec:
 
       destination:
         server: https://kubernetes.default.svc
-        namespace: '{{namespace}}'
+        namespace: argo
 
       syncPolicy:
         #automated:
