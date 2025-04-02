@@ -188,7 +188,7 @@ server:
   auth:
     ## @param server.auth.enabled Enable authentication
     ##
-    enabled: false
+    enabled: true
     ## @param server.auth.mode Set authentication mode. Either `server`, `client` or `sso`.
     ##
     mode: client
