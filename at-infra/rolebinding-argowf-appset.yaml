@@ -9,7 +9,7 @@ subjects:
 # You can specify more than one "subject"
 - kind: ServiceAccount
   name: argowf-helm-sa # "name" is case sensitive
-  namespace: abc-app-helm
+  namespace: argo
 roleRef:
   # "roleRef" specifies the binding to a Role / ClusterRole
   kind: Role #this must be Role or ClusterRole
