@@ -9,7 +9,8 @@ spec:
       elements:
       - cluster_name: k3d-shared
         charts_repo_url: https://charts.bitnami.com/bitnami
-        charts_target_version: "5.3.10"
+        # charts_target_version: "5.3.10"
+        charts_target_version: "11.1.8"
 
   template:
     metadata:
