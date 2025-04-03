@@ -11,6 +11,7 @@ spec:
         charts_repo_url: https://charts.bitnami.com/bitnami
         # charts_target_version: "5.3.10"
         charts_target_version: "11.1.8"
+        app_version: "3.6.4"
 
   template:
     metadata:
@@ -31,7 +32,7 @@ spec:
           version: v3
           releaseName: argo-workflows
           valueFiles:
-          - $infrarepo/at-infra/abc-app/argoworkflow-appset-helm/values.yaml
+          - $infrarepo/at-infra/abc-app/argoworkflow-appset-helm/{{app_version}}/values.yaml
 
       destination:
         server: https://kubernetes.default.svc
