@@ -32,7 +32,7 @@ spec:
           version: v3
           releaseName: argo-workflows
           valueFiles:
-          - $infrarepo/at-infra/abc-app/argoworkflow-appset-helm/{{app_version}}/values.yaml
+          - '$infrarepo/at-infra/abc-app/argoworkflow-appset-helm/{{app_version}}/values.yaml'
 
       destination:
         server: https://kubernetes.default.svc
